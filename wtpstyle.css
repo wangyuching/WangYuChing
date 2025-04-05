@@ -1,6 +1,4 @@
-.WPMade{
-    text-align: center;
-}
+
 
 body{
     display: flex;
@@ -14,6 +12,7 @@ div.changePage{
     height: 3vh;
     display: flex;
     text-align: center;
+    margin-bottom: 10%;
 }
 div.page{
     width:100%;
@@ -36,4 +35,8 @@ a#HomeWork{
 }
 a:hover{
     font-size: 1.8em;
+}
+
+.WPMade{
+    text-align: center;
 }
