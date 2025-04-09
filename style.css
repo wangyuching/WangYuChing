@@ -24,6 +24,9 @@ a#AboutMe{
 a#HomeWork{
     color:red;
 }
+a#WaterPuzzle{
+    color:rgb(139, 187, 62);
+}
 a:hover{
     font-size: 1.8em;
 }
