@@ -1,36 +1,42 @@
-div.changePage{
+.changePage {
     width: 100%;
-    height: 3vh;
+    height: 5vh;
     display: flex;
-    text-align: center;
-    margin-bottom: 10%;
-}
-div.page{
-    width:100%;
-    height: 100%;
+    justify-content: space-evenly;
+    margin-top: 4%;
+    margin-bottom: 5%
 }
 
-a{
+.changePage>a {
+    width: 100%;
+    text-align: center;
     text-decoration: none;
     font-size: 1.5em;
-    margin: 3%;
-}
-a#Home{
-    color: rgb(75, 75, 75);
-}
-a#AboutMe{
-    color:lightblue;
-}
-a#HomeWork{
-    color:red;
-}
-a#WaterPuzzle{
-    color:rgb(139, 187, 62);
-}
-a:hover{
-    font-size: 1.8em;
 }
 
+a#Home {
+    color: rgb(134, 88, 241);
+}
+
+a#AboutMe {
+    color: rgb(105, 193, 248);
+}
+
+a#LessonNote {
+    color: rgb(33, 238, 217);
+}
+
+a#HomeWork {
+    color: rgb(24, 242, 119);
+}
+
+a#WaterPuzzle {
+    color: rgb(209, 246, 23);
+}
+
+a:hover {
+    font-size: 1.8em;
+}
 div#NxN{
     text-align: center;
 }
