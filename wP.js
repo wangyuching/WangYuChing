@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let levelCount = 1;
     const tubes = [];
     let selectedTube = null;
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'blueviolet', 'pink', 'brown', 'gray', 'darkblue', 'lightgreen','lightblue', 'gold', 'silver', 'cyan'];
+    const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'blueviolet', 'pink', 'brown', 'gray', 'darkblue', 'lightgreen', 'lightblue', 'gold', 'silver', 'cyan'];
 
     function chooseLevel(Level) {
         levelCount = Level;
