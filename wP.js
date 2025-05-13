@@ -39,13 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("completed-tubes-count").textContent =
             completedTubes;
 
-        //檢查是否所有的試管都完成或者是空試管
-        if (
-            tubes.every((tube) => tube.childElementCount === 0 || allSameColor(tube))
-        ) {
-            alert("你已經完成本關卡");
-        }
+    //檢查是否所有的試管都完成或者是空試管
+    if (
+      tubes.every((tube) => tube.childElementCount === 0 || allSameColor(tube))
+    ) {
+      if (levelCount === 10) {
+        alert("恭喜!你已經完成所有挑戰!!");
+      } else {
+        alert("你已經完成本關卡!");
+        levelCount++;
+        document.getElementById("level-count").textContent = levelCount;
+        document.getElementById("completed-tubes-count").textContent = 0;
+        chooseLevel(levelCount);
+        createTubes();
+        fillTubes();
+      }
     }
+  }
 
     function pourWater(fromTube, toTube) {
         let fromWater = fromTube.querySelector(".water:last-child");
