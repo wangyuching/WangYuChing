@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*X軸位置*/
+    justify-content: center;
+    /*Y軸位置*/
+    background-color: rgb(232, 242, 248);
+}
+
 .changePage {
     width: 100%;
     height: 5vh;
@@ -5,7 +15,6 @@
     justify-content: space-evenly;
     margin-top: 4%;
     margin-bottom: 5%;
-    background-color: rgb(209, 233, 255);
 }
 
 .changePage>a {
@@ -32,11 +41,11 @@ a#HomeWork {
 }
 
 a#WaterPuzzle {
-    color: rgb(209, 246, 23);
+    color: rgb(170, 201, 15);
 }
 
 a:hover {
-    font-size: 1.8em;
+    font-size: 2em;
 }
 div#NxN{
     text-align: center;
@@ -57,4 +66,42 @@ table, tr, td{
     padding: 1em;
     text-align: center;
     margin: 0 auto;
+}
+
+.WPMade {
+    text-align: center;
+}
+
+#game-container {
+    display: flex;
+    /*彈性放置*/
+    flex-wrap: wrap;
+    /*卷軸不夠放，換到下一行*/
+    justify-content: center;
+    /*X軸 置中*/
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.tube {
+    width: 50px;
+    height: 200px;
+    border: 2px, solid, black;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    /*由下到上排序*/
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.water {
+    width: 100%;
+}
+
+.selected {
+    border-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
