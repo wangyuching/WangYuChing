@@ -1,10 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*X軸位置*/
-    justify-content: center;
-    /*Y軸位置*/
     background-color: rgb(232, 242, 248);
 }
 
@@ -36,7 +30,7 @@ a#LessonNote {
     color: rgb(33, 238, 217);
 }
 
-a#HomeWork {
+a#nXn {
     color: rgb(24, 242, 119);
 }
 
@@ -47,19 +41,36 @@ a#WaterPuzzle {
 a:hover {
     font-size: 2em;
 }
-div#NxN{
+
+
+#wp {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*X軸位置*/
+    justify-content: center;
+    /*Y軸位置*/
+}
+
+div#NxN {
     text-align: center;
 }
-#NxNh1{
+
+#NxNh1 {
     font-size: 2em;
     color: rgb(75, 75, 75);
 }
-div#nxnTable{
-    width:80%;
+
+div#nxnTable {
+    width: 80%;
     margin: 10px auto;
     padding: 20px;
 }
-table, tr, td{
+
+table,
+tr,
+td {
     background-color: lightcyan;
     border: 1px solid black;
     border-collapse: collapse;
