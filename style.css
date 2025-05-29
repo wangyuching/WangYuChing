@@ -1,5 +1,5 @@
 body {
-    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 .changePage {
@@ -27,7 +27,7 @@ a#AboutMe {
 }
 
 a#nXn {
-    color: rgb(24, 242, 119);
+    color: rgb(36, 230, 120);
 }
 
 a#WaterPuzzle {
@@ -48,7 +48,7 @@ a:hover {
 
 
 #index {
-    color: aliceblue;
+    color: rgba(44, 44, 44, 0.774);
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ div#NxN {
 
 #NxNh1 {
     font-size: 2em;
-    color: aliceblue;
+    color: rgba(44, 44, 44, 0.774);
 }
 
 div#nxnTable {
@@ -82,7 +82,7 @@ td {
 
 
 #wp {
-    color: aliceblue;
+    color: rgba(44, 44, 44, 0.774);
     display: flex;
     flex-direction: column;
     align-items: center;
