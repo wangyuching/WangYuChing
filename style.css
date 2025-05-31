@@ -49,7 +49,7 @@ a:hover {
     font-size: 2em;
 }
 
-
+/*index.html*/
 #index {
     color: rgba(255, 255, 255, 0.87);
     text-align: center;
@@ -71,7 +71,6 @@ a:hover {
     float: right;
     margin: 13px;
 }
-
 
 #other {
     width: 600px;
@@ -101,24 +100,49 @@ a:hover {
 #cube {
     margin: 5px 0px 0px 15px;
 }
+
 #aniCube {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
 }
 
 #myCuteiesDog {
@@ -137,6 +161,7 @@ a:hover {
     margin-top: 10px;
 }
 
+/*nXn.html*/
 div#NxN {
     text-align: center;
     margin-top: 10px;
@@ -164,6 +189,7 @@ td {
     margin: 0 auto;
 }
 
+/*waterPuzzle.html*/
 #wp {
     color: rgba(255, 255, 255, 0.87);
     display: flex;
