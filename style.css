@@ -1,4 +1,5 @@
 body {
+    background-color: #242424;
     color: rgba(255, 255, 255, 0.87);
 }
 
@@ -8,7 +9,8 @@ body {
     display: flex;
     gap: 10px;
     justify-content: space-between;
-    margin: 3% auto 5% auto;/* 上、左右自動、下 */
+    margin: 3% auto 5% auto;
+    /* 上、左右自動、下 */
 }
 
 .changePage>a {
@@ -48,7 +50,7 @@ a:hover {
 
 
 #index {
-    color: rgba(44, 44, 44, 0.774);
+    color: rgba(255, 255, 255, 0.87);
     text-align: center;
 }
 
@@ -60,7 +62,7 @@ div#NxN {
 
 #NxNh1 {
     font-size: 2em;
-    color: rgba(44, 44, 44, 0.774);
+    color: rgba(255, 255, 255, 0.87);
 }
 
 div#nxnTable {
@@ -82,7 +84,7 @@ td {
 
 
 #wp {
-    color: rgba(44, 44, 44, 0.774);
+    color: rgba(255, 255, 255, 0.87);
     display: flex;
     flex-direction: column;
     align-items: center;

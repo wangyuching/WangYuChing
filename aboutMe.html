@@ -6,16 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javaScript.js"></script>
 </head>
 
-<body>
+<body onload="Phone()">
+    <style>
+        body {
+            position: relative;
+        }
+        #about1, #about2 {
+            width: 50%;
+            background-color: rgba(55, 99, 230, 0.87);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+
+        }
+
+        a:hover {
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        button {
+            padding: 5px 10px;
+            color: rgba(255, 255, 255, 0.87);
+            background-color: #bfd819da;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute;
+            /* 新增，讓按鈕能自由移動 */
+        }
+    </style>
+
     <div class="changePage">
         <a href="index.html" target="_self" id="Home">首頁</a>
         <a href="aboutMe.html" target="_self" id="AboutMe">關於</a>
         <a href="nXn.html" target="_self" id="nXn">NxN乘法表</a>
         <a href="waterPuzzle.html" target="_self" id="WaterPuzzle" title="Water Puzzle">Water Puzzle</a>
         <a href="https://wangyuching.github.io/reactApp/" target="_blank" id="ReactApp">React App</a>
-
+    </div>
+    <div id="about1">
+        <h1>關於我</h1>
+        <p>我是王昱晴，這是我的個人網頁。</p>
+        <p>目前就讀於南台科技大學資訊工程學系。</p>
+        <p><a title="這個網頁是用來應付期末作業">在這個網頁上可以看到該課程期中考後的作業。</a></p>
+    </div>
+    <div id="about2">
+        <h1>聯絡方式</h1>
+        <p>電話:<button id="phone">顯示</button></p>
+        <p>信箱:5b1g0023@stust.edu.tw</p>
     </div>
 </body>
 
