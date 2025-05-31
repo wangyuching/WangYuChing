@@ -9,29 +9,18 @@
     <script src="javaScript.js"></script>
 </head>
 
-<body onload="Phone()">
+<body style="position: relative;" onload="Phone()">
     <style>
-        body {
-            position: relative;
-        }
-        #about1, #about2 {
-            width: 50%;
-            background-color: rgba(55, 99, 230, 0.87);
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-
-        }
-
         a:hover {
             font-size: 16px;
             text-decoration: none;
         }
 
         button {
-            padding: 5px 10px;
+            margin-left: 2px;
+            padding: 2px 5px;
             color: rgba(255, 255, 255, 0.87);
-            background-color: #bfd819da;
+            background-color: rgb(230, 160, 55);
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -47,16 +36,29 @@
         <a href="waterPuzzle.html" target="_self" id="WaterPuzzle" title="Water Puzzle">Water Puzzle</a>
         <a href="https://wangyuching.github.io/reactApp/" target="_blank" id="ReactApp">React App</a>
     </div>
-    <div id="about1">
-        <h1>關於我</h1>
+    <div id="Me">
+        <img src="img/me.jpg" id="me" />
+        <h1>個人簡介</h1>
         <p>我是王昱晴，這是我的個人網頁。</p>
         <p>目前就讀於南台科技大學資訊工程學系。</p>
         <p><a title="這個網頁是用來應付期末作業">在這個網頁上可以看到該課程期中考後的作業。</a></p>
     </div>
-    <div id="about2">
-        <h1>聯絡方式</h1>
-        <p>電話:<button id="phone">顯示</button></p>
-        <p>信箱:5b1g0023@stust.edu.tw</p>
+    <div id="other">
+        <div id="otherLeft">
+            <div id="textMe">
+                <h1>聯絡方式</h1>
+                <p>電話:<button id="phone">顯示</button></p>
+                <p>信箱:5b1g0023@stust.edu.tw</p>
+            </div>
+            <div id="cube">
+            </div>
+        </div>
+        <div id="myCuteiesDog">
+            <h1>最難過的旅遊經驗</h1>
+            <p>&</p>
+            <h1>最愛的狗</h1>
+            <img src="img/dog.jpg" id="dog" />
+        </div>
     </div>
 </body>
 

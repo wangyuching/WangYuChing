@@ -1,6 +1,7 @@
 body {
     background-color: #242424;
     color: rgba(255, 255, 255, 0.87);
+    min-width: 600px;
 }
 
 .changePage {
@@ -54,6 +55,70 @@ a:hover {
     text-align: center;
 }
 
+#Me {
+    width: 600px;
+    box-sizing: border-box;
+    background-color: rgba(55, 99, 230, 0.87);
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#me {
+    /* pic*/
+    width: 150px;
+    border-radius: 10px;
+    float: right;
+    margin: 13px;
+}
+
+
+#other {
+    width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 8px;
+}
+
+#otherLeft {
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+#textMe {
+    width: 215px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(55, 99, 230, 0.87);
+    margin-right: 20px;
+}
+
+#cube {
+    width: 255px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+#myCuteiesDog {
+    width: 260px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(55, 99, 230, 0.87);
+    line-height: 5px;
+    text-align: center;
+}
+
+#dog {
+    width: 230px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
 
 div#NxN {
     text-align: center;
@@ -81,7 +146,6 @@ td {
     text-align: center;
     margin: 0 auto;
 }
-
 
 #wp {
     color: rgba(255, 255, 255, 0.87);
