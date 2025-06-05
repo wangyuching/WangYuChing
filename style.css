@@ -145,7 +145,7 @@ a:hover {
     }
 }
 
-#myCuteiesDog {
+#learnedLesson {
     width: 260px;
     height: 400px;
     padding: 20px;
@@ -153,12 +153,6 @@ a:hover {
     background-color: rgba(55, 99, 230, 0.87);
     line-height: 5px;
     text-align: center;
-}
-
-#dog {
-    width: 230px;
-    border-radius: 10px;
-    margin-top: 10px;
 }
 
 /*nXn.html*/
