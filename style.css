@@ -55,102 +55,40 @@ a:hover {
     text-align: center;
 }
 
-#Me {
-    width: 600px;
+/*about.html*/
+.sameSet{
+    background-color: rgba(85, 128, 255, 0.875);
     box-sizing: border-box;
-    background-color: rgba(55, 99, 230, 0.87);
-    margin: 30px auto;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
 }
 
+#Me {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 30px auto;/*上、右、下、左*/
+
+}
 #me {
     /* pic*/
     width: 150px;
     border-radius: 10px;
-    float: right;
 }
 
-#other {
-    width: 600px;
-    box-sizing: border-box;
+#Other {
+    width: 500px;
     display: flex;
-    justify-content: space-around;
     margin: auto;
-    border-radius: 8px;
 }
-
-#otherLeft {
-    width: 300px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-}
-
 #textMe {
-    width: 215px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: rgba(55, 99, 230, 0.87);
-    margin-right: 20px;
+    width: 235px;
+    height: fit-content;
+    margin: 0 30px 30px 0;
 }
-
-#cube {
-    margin: 5px 0px 0px 15px;
-}
-
-#aniCube {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: red;
-    position: relative;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes example {
-    0% {
-        background-color: red;
-        left: 0px;
-        top: 0px;
-    }
-
-    25% {
-        background-color: yellow;
-        left: 200px;
-        top: 0px;
-    }
-
-    50% {
-        background-color: blue;
-        left: 200px;
-        top: 200px;
-    }
-
-    75% {
-        background-color: green;
-        left: 0px;
-        top: 200px;
-    }
-
-    100% {
-        background-color: red;
-        left: 0px;
-        top: 0px;
-    }
-}
-
 #learnedLesson {
-    width: 260px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: rgba(55, 99, 230, 0.87);
-    line-height: 5px;
+    width: 265px;
     text-align: center;
 }
 
@@ -158,6 +96,7 @@ a:hover {
 div#NxN {
     text-align: center;
     margin-top: 10px;
+    padding: auto;
 }
 
 #NxNh1 {
@@ -168,7 +107,7 @@ div#NxN {
 div#nxnTable {
     width: 80%;
     margin: 10px auto;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 table,
