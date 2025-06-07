@@ -140,9 +140,12 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-    #animation, #animated_div {
+
+    #animation,
+    #animated_div {
         width: 235px;
         height: 62px;
+        background-color: rgba(85, 128, 255, 0.875);
     }
 }
 
