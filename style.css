@@ -82,13 +82,22 @@ a:hover {
     display: flex;
     margin: auto;
 }
+#OtherLeft {
+    display: flex;
+    flex-direction: column;
+}
 #textMe {
     width: 235px;
-    height: fit-content;
+    height: 193px;
     margin: 0 30px 30px 0;
+}
+#animation {
+    width: 235px;
+    height: 62px;
 }
 #learnedLesson {
     width: 235px;
+    height: 285px;
 }
 
 /*nXn.html*/
