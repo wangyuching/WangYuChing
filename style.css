@@ -61,6 +61,7 @@ a:hover {
     box-sizing: border-box;
     border-radius: 10px;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #Me {
@@ -146,6 +147,8 @@ a:hover {
         width: 235px;
         height: 62px;
         background-color: rgba(85, 128, 255, 0.875);
+        border-radius: 10px;
+        font-family: Arial, Helvetica, sans-serif;
     }
 }
 
