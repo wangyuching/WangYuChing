@@ -116,17 +116,18 @@ a:hover {
 #animated_div {
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 11px;
+    padding-top: 20px;
     text-align: center;
     width: 62px;
     height: 62px;
     background-color: rgba(85, 128, 255, 0.875);
     opacity: 0.5;
-    transition-property: width, height, transform, background-color, font-size, opacity;
-    transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+    transition-property: width, height, transform, background-color, font-size, opacity, padding-top;
+    transition-duration: 1s, 1s, 1s, 1s, 1s, 1s, 1s;
 }
 
 #animated_div:hover {
+    padding-top: 5px;
     width: 235px;
     font-size: 37px;
     background-color: rgba(85, 128, 255, 0.875);
