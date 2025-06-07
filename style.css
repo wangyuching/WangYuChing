@@ -92,7 +92,7 @@ a:hover {
 }
 
 #textMe {
-    width: 235px;
+    width: 250px;
     height: 193px;
     margin: 0 30px 30px 0;
 }
@@ -110,7 +110,7 @@ a:hover {
 }
 
 #animation {
-    width: 235px;
+    width: 250px;
     height: 62px;
 }
 
@@ -129,14 +129,14 @@ a:hover {
 
 #animated_div:hover {
     padding-top: 5px;
-    width: 235px;
+    width: 250px;
     font-size: 37px;
     background-color: rgba(85, 128, 255, 0.875);
     opacity: 1;
 }
 
 #learnedLesson {
-    width: 235px;
+    width: 220px;
     height: 285px;
 }
 
