@@ -45,10 +45,6 @@ a#ReactApp {
     font-weight: 600;
 }
 
-a:hover {
-    font-size: 2em;
-}
-
 /*index.html*/
 #index {
     color: rgba(255, 255, 255, 0.87);
@@ -112,6 +108,7 @@ a:hover {
 #animation {
     width: 250px;
     height: 62px;
+    display: flex;
 }
 
 #animated_div {
@@ -129,7 +126,7 @@ a:hover {
 
 #animated_div:hover {
     padding-top: 5px;
-    width: 250px;
+    width: 200px;
     font-size: 37px;
     background-color: rgba(85, 128, 255, 0.875);
     opacity: 1;
