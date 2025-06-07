@@ -138,6 +138,13 @@ a:hover {
     height: 285px;
 }
 
+@media (max-width: 600px) {
+    #animation, #animated_div {
+        width: 235px;
+        height: 62px;
+    }
+}
+
 /*nXn.html*/
 div#NxN {
     text-align: center;
