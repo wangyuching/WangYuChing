@@ -181,9 +181,18 @@ document.addEventListener("DOMContentLoaded", () => {
   function pourWater(fromTube, toTube) {
     let fromWater = fromTube.querySelector(".water:last-child");
     let toWater = toTube.querySelector(".water:last-child");
+    /*
+      在 fromTube 裡，找到 class 為 water 的最後一個子元素（也就是最上層的水塊）並指派給 fromWater。
+      在 TOTube 裡，找到 class 為 water 的最後一個子元素（也就是最上層的水塊）並指派給 ToWater。
 
-    if (!toWater) {
+    */
+
+    if (!toWater) {//當目標試管（toTube）是空的
+      //紀錄上一次 fromWater的背景顏色
       const color = fromWater ? fromWater.style.backgroundColor : null;
+      //如果 fromWater 存在，就把它的背景顏色指定給 color。
+      //如果 fromWater 不存在，就把 color 設為 null。
+
       while (
         fromWater &&
         fromWater.style.backgroundColor === color &&
@@ -192,7 +201,13 @@ document.addEventListener("DOMContentLoaded", () => {
         toTube.appendChild(fromWater);
         fromWater = fromTube.querySelector(".water:last-child");
       }
-    } else {
+      /*
+        當 fromWater 存在 & fromWater 的背景顏色與 color 相同 & 且 toTube 的子元素數量小於 4 時，
+          將 fromWater 添加到 toTube 中。
+          更新 fromTube 中的最後一個 water 元素。
+      */
+    }
+    else {//當目標試管（toTube）不是空的
       while (
         fromWater &&
         fromWater.style.backgroundColor === toWater.style.backgroundColor &&
@@ -202,6 +217,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fromWater = fromTube.querySelector(".water:last-child");
         toWater = toTube.querySelector(".water:last-child");
       }
+      /*
+        當 fromWater 存在 & fromWater 的背景顏色與 toWater 的背景顏色相同 & 且 toTube 的子元素數量小於 4 時，
+          將 fromWater 添加到 toTube 中。
+          更新 fromTube 中的最後一個 water 元素。
+          更新 toTube 中的最後一個 water 元素。
+      */
     }
     checkGameState();
   }
