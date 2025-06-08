@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("completed-tubes-count").textContent =
       completedTubes;
 
-    //檢查是否所有的試管都完成或者是空試管
     if (
       tubes.every((tube) => tube.childElementCount === 0 || allSameColor(tube))
     ) {
@@ -131,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tubes.push(tube);
     }
 
-    //新增兩管空的試管來當作緩衝使用
     for (let i = 0; i < 2; i++) {
       const emptyTube = document.createElement("div");
       emptyTube.classList.add("tube");
@@ -142,21 +140,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function fillTubes() {
-    // 填滿試管顏色
     const gameColors = colors.slice(0, Math.min(levelCount + 1, colors.length));
     const waterBlocks = [];
 
-    // 對於每一種顏色，產生4個block
     gameColors.forEach((color) => {
       for (let i = 0; i < 4; i++) {
         waterBlocks.push(color);
       }
     });
 
-    //將顏色打亂
     waterBlocks.sort(() => 0.5 - Math.random());
 
-    //將waterBlock分散在不同的試管內
     let blockIndex = 0;
     tubes.slice(0, levelCount + 1).forEach((tube) => {
       for (let i = 0; i < 4; i++) {
