@@ -120,7 +120,7 @@ a#ReactApp {
     display: flex;
 }
 
-#animated_div {
+.animated_div {
     box-sizing: border-box;
     border-radius: 10px;
     padding-top: 20px;
@@ -133,7 +133,7 @@ a#ReactApp {
     transition-duration: 1s, 1s, 1s, 1s, 1s;
 }
 
-#animated_div:hover {
+.animated_div:hover {
     padding-top: 5px;
     width: 200px;
     font-size: 37px;
