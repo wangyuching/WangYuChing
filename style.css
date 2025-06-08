@@ -1,3 +1,4 @@
+/* === 共用樣式 === */
 body {
     background-color: #242424;
     color: rgba(255, 255, 255, 0.87);
@@ -56,6 +57,13 @@ a#ReactApp {
     color: rgb(226, 60, 22);
 }
 
+/* === index.css 專用 === */
+#index {
+    color: rgba(255, 255, 255, 0.87);
+    text-align: center;
+}
+
+/* === aboutMe.css 專用 === */
 .sameSet {
     background-color: rgba(85, 128, 255, 0.875);
     box-sizing: border-box;
@@ -70,8 +78,6 @@ a#ReactApp {
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto 30px auto;
-    /*上、右、下、左*/
-
 }
 
 #me {
@@ -106,7 +112,6 @@ a#ReactApp {
     border-radius: 4px;
     cursor: pointer;
     position: absolute;
-    /* 新增，讓按鈕能自由移動 */
 }
 
 #animation {
@@ -151,4 +156,78 @@ a#ReactApp {
         border-radius: 10px;
         font-family: Arial, Helvetica, sans-serif;
     }
+}
+
+/* === nXn.css 專用 === */
+div#NxN {
+    text-align: center;
+    margin-top: 10px;
+    padding: auto;
+}
+
+#NxNh1 {
+    font-size: 2em;
+    color: #242424;
+}
+
+div#nxnTable {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px 40px;
+}
+
+table,
+tr,
+td {
+    color: #242424;
+    background-color: lightcyan;
+    border: 1px solid #242424;
+    border-collapse: collapse;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* === waterpuzzle.css 專用 === */
+#wp {
+    color: rgba(255, 255, 255, 0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.WPMade {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.tube {
+    width: 50px;
+    height: 200px;
+    border: 2px, solid, aliceblue;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.water {
+    width: 100%;
+}
+
+.selected {
+    border-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
