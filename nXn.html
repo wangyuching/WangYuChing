@@ -6,28 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Work</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/js/nXn.js"></script>
 </head>
 
 <body>
-    <script>
-        function myFunction() {
-            var n = document.getElementById('numberInput').value;
-
-            var str = "<table>";
-
-            for (let i = 1; i <= n; i++) {
-                str += "<tr>";
-                for (let j = 1; j <= n; j++) {
-                    str += `<td> ${i} x ${j} = ${i * j} </td>`;
-                }
-                str += "</tr>";
-            }
-            str += "</table>";
-
-            document.getElementById('nxnTable').innerHTML = str;
-        }
-    </script>
-
     <div id="top">
         <div class="page_div">
             <a href="index.html" target="_self" id="Home">首頁</a>
