@@ -1,0 +1,28 @@
+div#NxN {
+    text-align: center;
+    margin-top: 10px;
+    padding: auto;
+}
+
+#NxNh1 {
+    font-size: 2em;
+    color: #242424;
+}
+
+div#nxnTable {
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px 40px;
+}
+
+table,
+tr,
+td {
+    color: #242424;
+    background-color: lightcyan;
+    border: 1px solid #242424;
+    border-collapse: collapse;
+    padding: 1em;
+    text-align: center;
+    margin: 0 auto;
+}
