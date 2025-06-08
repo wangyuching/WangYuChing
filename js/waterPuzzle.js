@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const gameContainer = document.getElementById("game-container");
-  const playButton = document.getElementById("play-button");
   const levelSelect = document.getElementById("level-select");
+  const playButton = document.getElementById("play-button");
+  const gameContainer = document.getElementById("game-container");
 
   const colors = [
     "red",
@@ -29,11 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedTube = null;
   let levelCount = 1;
 
+  /* //選擇遊戲的關卡\\
+    當函式被呼叫時，會傳入一個參數 level。
+      將 level 的值指定給全域變數 levelCount。
+      取得網頁上 id 為 level-count 的元素，並將其 textContent 屬性設為 levelCount。*/
   function chooseLevel(level) {
     levelCount = level;
     document.getElementById("level-count").textContent = levelCount;
   }
-
+  /* /處理關卡選擇/\\
+    將levelSelect 這個元素綁定一個 "change" 事件監聽器，改變選單選項時，事件處理函式從事件物件 event 中取得目前選中的值。
+      將選中的值轉換為十進位整數。
+      呼叫 chooseLevel 函式，傳入選中的關卡數字。\\
+    */
   levelSelect.addEventListener("change", (event) => {
     const selectedLevel = parseInt(event.target.value, 10);
     chooseLevel(selectedLevel);
