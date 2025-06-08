@@ -229,13 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 8. 檢查遊戲狀態
   function checkGameState() {
-    /*定義一個判斷試管內是否全為同色且滿4格的箭頭函式。(tube)目前正在檢查的那一個試管（DOM 元素）。
-        將 tube（試管的 <div>）裡面的所有子元素(water)，轉換成陣列並指派給常數 waters。
-        回傳True/False:
-          判斷 waters 的長度是否等於 4，
-          且 waters 中的每個 water 的背景顏色是否都與第一個 water 的背景顏色相同。
-            ( 對 waters 陣列中的每個元素（每個 water 物件）執行你給的箭頭函式 (water)=>...... )
-      */
     const allSameColor = (tube) => {
       const waters = Array.from(tube.children);
       return (
@@ -243,6 +236,13 @@ document.addEventListener("DOMContentLoaded", () => {
         waters.every((water) => water.style.backgroundColor === waters[0].style.backgroundColor)
       );
     };
+    /*定義一個判斷試管內是否全為同色且滿4格的箭頭函式。(tube)目前正在檢查的那一個試管（DOM 元素）。
+        將 tube（試管的 <div>）裡面的所有子元素(water)，轉換成陣列並指派給常數 waters。
+        回傳True/False:
+          判斷 waters 的長度是否等於 4，
+          且 waters 中的每個 water 的背景顏色是否都與第一個 water 的背景顏色相同。
+            ( 對 waters 陣列中的每個元素（每個 water 物件）執行你給的箭頭函式 (water)=>...... )
+    */
 
     let completedTubes = 0;
     tubes.forEach((tube) => {
@@ -251,6 +251,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     document.getElementById("completed-tubes-count").textContent = completedTubes;
+    /*
+      對 tubes 陣列中的每個 tube 執行 allSameColor 函式。
+        如果該試管內的水塊全為同色且滿4格(allSameColor函式)
+        completedTubes 增加 1。
+      將已完成的試管數量顯示在網頁上 id 為 completed-tubes-count 的元素中。
+    */
 
     if (
       tubes.every((tube) => tube.childElementCount === 0 || allSameColor(tube))
@@ -267,5 +273,17 @@ document.addEventListener("DOMContentLoaded", () => {
         fillTubes();
       }
     }
+    /*
+      如果 tubes 每個 tube 都是空的 或 全為同色滿4格(allSameColor函式)
+        如果 levelCount 等於 10
+          顯示恭喜訊息。
+        否則，顯示完成關卡訊息。
+          levelCount 增加 1。
+          更新網頁上 id 為 level-count 的元素的內容。
+          更新網頁上 id 為 completed-tubes-count 的元素的內容為 0。
+          呼叫 chooseLevel(levelCount) 函式，選擇新的關卡。
+          呼叫 createTubes() 函式，重新建立試管。
+          呼叫 fillTubes() 函式，重新填充水塊。
+    */
   }
 });
