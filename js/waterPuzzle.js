@@ -58,11 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
     fillTubes();
   });
 
-  // 4. 建立試管
+  // 4. 建立試管 有顏色:levelCount+1 沒顏色:2
   function createTubes() {
+    /* 清空 gameContainer & tubes(目前關卡中產生的試管（tube）DOM 元素)*/
     gameContainer.innerHTML = "";
     tubes.length = 0;
 
+    // 創建 full試管:levelCount+1
+    /*
+      建立 0 到 levelCount（包含 levelCount）試管。
+        創建一個新的 div 元素
+        class 設為 "tube"
+        試管添加一個點擊事件監聽器，當試管被點擊時，呼叫 selectTube 函式並傳入該試管。
+        將新創建的試管添加到 gameContainer 。
+        試管加入到 tubes 陣列尾端。
+    */
     for (let i = 0; i < levelCount + 1; i++) {
       const tube = document.createElement("div");
       tube.classList.add("tube");
@@ -71,6 +81,15 @@ document.addEventListener("DOMContentLoaded", () => {
       tubes.push(tube);
     }
 
+    // 添加 empty試管 :2
+    /*
+      建立 2 試管。
+        創建一個新的 div 元素
+        class 設為 "tube"
+        試管添加一個點擊事件監聽器，當試管被點擊時，呼叫 selectTube 函式並傳入該試管。
+        將新創建的試管添加到 gameContainer 。
+        試管加入到 tubes 陣列尾端。
+    */
     for (let i = 0; i < 2; i++) {
       const emptyTube = document.createElement("div");
       emptyTube.classList.add("tube");
@@ -82,17 +101,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 5. 填充水塊
   function fillTubes() {
+    /*從 colors 陣列的第 0 個元素開始，取出最小值( levelCount + 1 個元素 或 colors.length )
+      創建一個空的 waterBlocks 陣列，用來存放水塊的顏色。*/
     const gameColors = colors.slice(0, Math.min(levelCount + 1, colors.length));
     const waterBlocks = [];
 
+    /* 
+      gameColors裡每個顏色重複 4 次
+        加到 waterBlocks 陣列(由後往前擠入)。
+    */
     gameColors.forEach((color) => {
       for (let i = 0; i < 4; i++) {
         waterBlocks.push(color);
       }
     });
 
+    // 隨機打亂 waterBlocks 陣列
+    /* 
+      對陣列中的任意兩個元素進行比較
+      0.5 - Math.random() 結果會落在 -0.5 ~ 0.5 之間
+      當結果為正，sort 會把元素往前排；為負則往後排
+    */
     waterBlocks.sort(() => 0.5 - Math.random());
 
+    // 填充試管
+    /*
+      blockIndex 變數並初始化為 0，用來追蹤目前已經分配到第幾個水塊
+      對 tubes 陣列裡從第 0 個到第 levelCount 個（不包含第 levelCount + 1 個）的每個元素（tube）執行一次指定的函式。
+        在每個 tube 中，使用 for 迴圈來創建 4 個水塊。
+        如果 blockIndex 的長度 < waterBlocks 的長度
+          創建一個新的 div 元素
+          class 設為 "water"
+          背景顏色為 waterBlocks 中當前的 blockIndex
+          高度為 20%。
+          將水塊添加到 tube 中。
+          blockIndex 增加 1。
+    */
     let blockIndex = 0;
     tubes.slice(0, levelCount + 1).forEach((tube) => {
       for (let i = 0; i < 4; i++) {
@@ -108,7 +152,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. 選擇試管
+  // 6.收到一個被點擊的試管
+  /*
+    當試管被點擊時，會呼叫 selectTube 函式(在function createTubes() 已呼叫)。
+      如果已經有一個被選中的試管
+        如果這次點擊的不是同一根試管
+          呼叫 pourWater 函式，將水從已經被選中的試管倒到目前點擊的試管。
+        不論有無倒水，都會把原本選中的試管移除 "selected" 樣式
+        將 selectedTube 設為 null（代表現在沒有選中的試管）。
+      如果是目前沒有選中的試管
+        將點擊的試管設為選中的試管
+        class 設為 "selected" 
+  */
   function selectTube(tube) {
     if (selectedTube) {
       if (selectedTube !== tube) {
