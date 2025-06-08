@@ -3,6 +3,7 @@
 
 <head lang="en">
     <meta charset="UTF-8">
+    <!--viewport的寬度為裝置的寬度，並且初始縮放比例為1.0。width=device-width 網頁寬度自動對應裝置螢幕寬度-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,17 +13,22 @@
     <script>
         function Phone() {
             const btn = document.getElementById('phone');
-            btn.addEventListener('mouseenter', function () {
-                // 取得body寬高與按鈕寬高
+            // 當滑鼠移入按鈕時觸發事件
+            btn.addEventListener('mouseenter', () => {
+                // 取得 btn 在當前網頁可視區域（viewport）可移動的範圍
+                // 取得 <body> 與 <html> 元素
                 const body = document.body;
                 const html = document.documentElement;
+                // 取得當前網頁可視區域（viewport）的最大寬度與高度。Math.max( , )取得兩個值中的最大值。
                 const width = Math.max(body.clientWidth, html.clientWidth);
                 const height = Math.max(body.clientHeight, html.clientHeight);
+                // 計算按鈕可移動的最大 left/top 值（避免超出畫面)。viewport的寬度 - 按鈕的寬度(content width + border + padding)。
                 const maxLeft = width - btn.offsetWidth;
                 const maxTop = height - btn.offsetHeight;
-                // 隨機產生新位置
+                // 隨機生成 btn 新的 left/top 值。0 ~ maxLeft/maxTop(btn 上下左右邊緣不超viewport)。Math.random() 產生一個 0（包含）到 1（不包含）之間的隨機小數。
                 const left = Math.random() * maxLeft;
                 const top = Math.random() * maxTop;
+                // 將新的 left/top 值設定給按鈕元素的 CSS left/top 屬性。
                 btn.style.left = left + 'px';
                 btn.style.top = top + 'px';
             });
