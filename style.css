@@ -19,7 +19,7 @@ body {
     box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
-    text-wrap: nowrap;
+    text-wrap: wrap;
     width: 200px;
     min-width: 100px;
     font-size: 20px;
